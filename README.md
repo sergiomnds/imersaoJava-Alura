@@ -14,6 +14,12 @@ Na primeira aula, estamos utilizando da API do IMDB para desenvolver nossa próp
 
 - [ ] Desafio supremo: criar alguma maneira para você dar uma avaliação ao filme, puxando de algum arquivo de configuração OU pedindo a avaliação para o usuário digitar no terminal.
 
+<h3>Galeria</h3>
+![Terminal Costumizado mostrando o Top 250 Filmes](https://user-images.githubusercontent.com/85349959/180286950-235a893c-0682-4468-804e-dfac3aaf65e0.png)
+
+<h3>Considerações</h3>
+Para costumização, não foi possível visualizar os emoji no terminal do Discord. Portanto, fiz um [cópia do projeto](https://replit.com/@sergiomnds/aula1#Main.java) e coloquei no Replit. De lá que foi tirado o print do Terminal.
+
 <h3>Material Complementar:</h3>
 
 - Artigo na Alura [“O que é JSON?”](https://www.alura.com.br/artigos/o-que-e-json).
