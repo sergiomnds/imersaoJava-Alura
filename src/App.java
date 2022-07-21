@@ -23,17 +23,22 @@ public class App {
         List<Map<String, String>> listaFilmes = parser.parse(body);
 
         // ? Exibir e Manipular os dados.
+        int rank = 1;
         for (Map<String, String> filme : listaFilmes) {
             System.out.println();
+            System.out.println("\u001b[1m\u001b[32mNº: " + rank + "\u001b[0m");
             System.out.println(
                     "\u001b[1m\u001b[34mTitle: " + filme.get("title") + "\u001b[0m");
             System.out.println("\u001b[1mFilm Poster: \u001b[0m" + filme.get("image"));
             System.out.println("\u001b[1m\u001b[41mRating: " + filme.get("imDbRating") + "\u001b[0m");
+
+            // * Arrendoda para Cima caso o número seja quebrado. Ex: 8.1 => 9;
             for (int i = 0; i < Double.parseDouble(filme.get("imDbRating")); i++) {
                 System.out.print("★"); // Unicode: U+2B50
             }
             System.out.println();
             System.out.println("---------------------------------");
+            rank++;
         }
     }
 }
