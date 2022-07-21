@@ -24,9 +24,15 @@ public class App {
 
         // ? Exibir e Manipular os dados.
         for (Map<String, String> filme : listaFilmes) {
-            System.out.println(filme.get("title"));
-            System.out.println(filme.get("image"));
-            System.out.println(filme.get("imDbRating"));
+            System.out.println();
+            System.out.println(
+                    "\u001b[1m\u001b[34mTitle: " + filme.get("title") + "\u001b[0m");
+            System.out.println("\u001b[1mFilm Poster: \u001b[0m" + filme.get("image"));
+            System.out.println("\u001b[1m\u001b[41mRating: " + filme.get("imDbRating") + "\u001b[0m");
+            for (int i = 0; i < Double.parseDouble(filme.get("imDbRating")); i++) {
+                System.out.print("★"); // Unicode: U+2B50
+            }
+            System.out.println();
             System.out.println("---------------------------------");
         }
     }
