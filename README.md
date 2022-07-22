@@ -29,3 +29,5 @@ Na quinta aula, estamos
 - Podcast Hipters.Tech [“Integração Contínua, Deploy Contínuo e Github Actions”](https://www.alura.com.br/podcast/hipsterstech-integracao-continua-deploy-continuo-e-github-actions-hipsters-213-a335).
 
 - Pesquisa da JetBrains, empresa que desenvolve a IDE IntelliJ, [sobre o ecossistema Java em 2021](https://www.jetbrains.com/lp/devecosystem-2021/java/).
+
+- Artigo: [Como elaborar um bom arquivo Readme para os seus projetos](https://www.alura.com.br/artigos/escrever-bom-readme).
