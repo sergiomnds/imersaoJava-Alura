@@ -1,9 +1,9 @@
 ![Java](https://img.shields.io/badge/java-%23ED8B00.svg?style=for-the-badge&logo=java&logoColor=white)
-<h1 align="center"> Imersão Java - 1° Aula </h1>
+<h1 align="center"> ☕ Imersão Java - 1° Aula </h1>
 
 Na primeira aula, estamos utilizando da API do IMDB para desenvolver nossa própria aplicação.
 
-<h3>Desafios Propostos:</h3>
+<h3>🎯 Desafios Propostos:</h3>
 
 - [ ] Consumir o endpoint de filmes mais populares da API do IMDB. Procure também, na documentação da API do IMDB, o endpoint que retorna as melhores séries e o que retorna as séries mais populares.
 
@@ -15,16 +15,16 @@ Na primeira aula, estamos utilizando da API do IMDB para desenvolver nossa próp
 
 - [ ] Desafio supremo: criar alguma maneira para você dar uma avaliação ao filme, puxando de algum arquivo de configuração OU pedindo a avaliação para o usuário digitar no terminal.
 
-<h2>Galeria</h2>
+<h2>📷 Galeria</h2>
 
 ![terminal customizado com cores e emojis de estrela](https://user-images.githubusercontent.com/85349959/180288722-ce7b2005-f0a2-410d-b645-6f733cf33276.png)
 
 
-<h2>Considerações</h2>
+<h2>📌 Considerações</h2>
 
 Para costumização, não foi possível visualizar os emoji no terminal do Discord. Portanto, fiz um [cópia do projeto](https://replit.com/@sergiomnds/aula1#Main.java) e coloquei no Replit. De lá que foi tirado o print do Terminal.
 
-<h2>Material Complementar:</h2>
+<h2>📚 Material Complementar:</h2>
 
 - Artigo na Alura [“O que é JSON?”](https://www.alura.com.br/artigos/o-que-e-json).
 
