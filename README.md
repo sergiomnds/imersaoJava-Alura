@@ -2,7 +2,7 @@
 
 [![Status](https://img.shields.io/badge/Status-Em%20Desenvolvimento-green)]()
 
-## Imersão Java- Curso Alura
+## ☕ Imersão Java- Curso Alura
 
 Repositório para guardar os códigos que forem sendo desenvolvidos durante as aulas e os desafios que forem sendo feitos!
 
