@@ -1,4 +1,6 @@
+import java.io.InputStream;
 import java.net.URI;
+import java.net.URL;
 import java.net.http.HttpClient;
 import java.net.http.HttpRequest;
 import java.net.http.HttpResponse;
@@ -23,22 +25,33 @@ public class App {
         List<Map<String, String>> listaFilmes = parser.parse(body);
 
         // ? Exibir e Manipular os dados.
-        int rank = 1;
+        var gerador = new GeradorFigurinhas();
         for (Map<String, String> filme : listaFilmes) {
-            System.out.println();
-            System.out.println("\u001b[1m\u001b[32mNº: " + rank + "\u001b[0m");
-            System.out.println(
-                    "\u001b[1m\u001b[34mTitle: " + filme.get("title") + "\u001b[0m");
-            System.out.println("\u001b[1mFilm Poster: \u001b[0m" + filme.get("image"));
-            System.out.println("\u001b[1m\u001b[41mRating: " + filme.get("imDbRating") + "\u001b[0m");
+            String urlImagem = filme.get("image");
 
-            // * Arrendoda para Cima caso o número seja quebrado. Ex: 8.1 => 9;
-            for (int i = 0; i < Double.parseDouble(filme.get("imDbRating")); i++) {
-                System.out.print("★"); // Unicode: U+2B50
+            if (urlImagem.contains("._V1_UY176_CR0,0,128,176_AL_")) {
+                urlImagem = urlImagem.replace("._V1_UY176_CR0,0,128,176_AL_", "");
             }
-            System.out.println();
-            System.out.println("---------------------------------");
-            rank++;
+            if (urlImagem.contains("._V1_UX128_CR0,3,128,176_AL_")) {
+                urlImagem = urlImagem.replace("._V1_UX128_CR0,3,128,176_AL_", "");
+            }
+            if (urlImagem.contains("._V1_UX128_CR0,1,128,176_AL_")) {
+                urlImagem = urlImagem.replace("._V1_UX128_CR0,1,128,176_AL_", "");
+            }
+
+            String titulo = filme.get("title").replace(" ", "");
+
+            if (titulo.contains(":")) {
+                titulo = titulo.replace(":", "");
+            }
+
+            try {
+                InputStream inputStream = new URL(urlImagem).openStream();
+                String nomeArquivo = titulo + ".png";
+                gerador.criar(inputStream, nomeArquivo);
+            } catch (Exception e) {
+                System.out.println("Erro ao baixar a imagem: " + urlImagem);
+            }
         }
     }
 }
