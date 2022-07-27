@@ -1,3 +1,4 @@
+![Java](https://img.shields.io/badge/java-%23ED8B00.svg?style=for-the-badge&logo=java&logoColor=white)
 <h1 align="center"> Imersão Java - 1° Aula </h1>
 
 Na primeira aula, estamos utilizando da API do IMDB para desenvolver nossa própria aplicação.
