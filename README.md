@@ -34,7 +34,7 @@ Na segunda aula, estamos
 
 <h2>Considerações</h2>
 
-Utilizar dessa API para gerar as imagens não é um trabalho fácil, a começar pelo problema para salvar com a extensão ".png". Consegui resolver isso na maioria dos filmes, mas ainda tiveram alguns arquivos ainda relutantes e não consegui resolver. Algumas imagens simplesmente não existem para criar as figurinhas e outra não conseguiram ser lidas, mas foram a minoria também.
+Utilizar dessa API para gerar as imagens não é um trabalho fácil, a começar pelo problema para salvar com a extensão ".png". Consegui resolver isso! Era um problema com títulos com ":". Fora isso, algumas imagens simplesmente não existem para criar as figurinhas e outra não conseguiram ser lidas, mas foram a minoria também.
 
 O Outline com Java é uma grande gambiarra kkkk, até consegui criar porém algumas figurinhas ficavam deslocadas o texto do contorno já que são gerados separadamente, então preferi retirar.
 
