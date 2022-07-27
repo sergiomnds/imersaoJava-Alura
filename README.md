@@ -1,7 +1,7 @@
 ![Java](https://img.shields.io/badge/java-%23ED8B00.svg?style=for-the-badge&logo=java&logoColor=white)
 <h1 align="center">☕ Imersão Java - 2° Aula </h1>
 
-Na segunda aula, estamos
+Na segunda aula, estamos criando as 250 figurinhas dos filmes de forma automática, escrevendo uma legenda e manipulando as imagens com outros métodos.
 
 <h3>🎯 Desafios Propostos:</h3>
 
