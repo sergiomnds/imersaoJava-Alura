@@ -1,49 +1,29 @@
 import java.io.InputStream;
-import java.net.URI;
 import java.net.URL;
-import java.net.http.HttpClient;
-import java.net.http.HttpRequest;
-import java.net.http.HttpResponse;
-import java.net.http.HttpResponse.BodyHandlers;
 import java.util.List;
 import java.util.Map;
 
 public class App {
     public static void main(String[] args) throws Exception {
         // ? PEGAR OS DADOS DO IMDB - Fazer uma conexão HTTP e buscar o Top 250 Filmes
-        String url = "https://mocki.io/v1/9a7c1ca9-29b4-4eb3-8306-1adb9d159060";
+        // String url = "https://mocki.io/v1/9a7c1ca9-29b4-4eb3-8306-1adb9d159060";
         // ! URL Alternativa, pois o API do IMDB está fora do ar!
+        String url = "https://api.nasa.gov/planetary/apod?api_key=QbKfDf00kyvdWOrgfDfeUCVO4jQjhIxgs8eGCMRv&start_date=2022-06-12&end_date=2022-06-14";
 
-        URI endereco = URI.create(url);
-        var client = HttpClient.newHttpClient();
-        HttpRequest request = HttpRequest.newBuilder(endereco).GET().build();
-        HttpResponse<String> response = client.send(request, BodyHandlers.ofString());
-        String body = response.body();
+        var http = new ClienteHttp();
+        String json = http.buscaDados(url);
 
         // ? Pegar só os dados que interessam (título, pôster, nota).
         var parser = new JsonParser();
-        List<Map<String, String>> listaFilmes = parser.parse(body);
+        List<Map<String, String>> listaConteudos = parser.parse(json);
 
         // ? Exibir e Manipular os dados.
         var gerador = new GeradorFigurinhas();
-        for (Map<String, String> filme : listaFilmes) {
-            String urlImagem = filme.get("image");
+        for (int i = 0; i < 10; i++) {
+            Map<String, String> conteudo = listaConteudos.get(i);
+            String urlImagem = conteudo.get("image").replace("(@+)(.*).jpg$", "$1.jpg");
 
-            if (urlImagem.contains("._V1_UY176_CR0,0,128,176_AL_")) {
-                urlImagem = urlImagem.replace("._V1_UY176_CR0,0,128,176_AL_", "");
-            }
-            if (urlImagem.contains("._V1_UX128_CR0,3,128,176_AL_")) {
-                urlImagem = urlImagem.replace("._V1_UX128_CR0,3,128,176_AL_", "");
-            }
-            if (urlImagem.contains("._V1_UX128_CR0,1,128,176_AL_")) {
-                urlImagem = urlImagem.replace("._V1_UX128_CR0,1,128,176_AL_", "");
-            }
-
-            String titulo = filme.get("title").replace(" ", "");
-
-            if (titulo.contains(":")) {
-                titulo = titulo.replace(":", "");
-            }
+            String titulo = conteudo.get("title").replace(" ", "");
 
             try {
                 InputStream inputStream = new URL(urlImagem).openStream();
