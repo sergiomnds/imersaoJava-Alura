@@ -1,8 +1,8 @@
-<h1 align="center"> Imersão Java - 3° Aula </h1>
+<h1 align="center">☕ Imersão Java - 3° Aula </h1>
 
 Na terceira aula, estamos
 
-<h3>Desafios Propostos:</h3>
+<h3>🎯 Desafios Propostos:</h3>
 
 - [ ] Transformar a classe que representa os conteúdos em um Record, disponível a partir do Java 16
 
@@ -14,7 +14,7 @@ Na terceira aula, estamos
 
 - [ ] Desafio supremo: consumir outras APIs que contém imagens, como a da Marvel, que é bem diferente. Repositório com APIs públicas: [clique aqui](https://github.com/public-apis/public-apis).
 
-<h3>APIs</h3>
+<h3>🌌 APIs</h3>
 
 - Documentação das [APIs da NASA](https://api.nasa.gov).
 - API da [Foto Astronômica do dia da NASA](https://api.nasa.gov/planetary/apod?api_key=DEMO_KEY).
@@ -25,15 +25,15 @@ Caso a API da NASA fique instável:
 
 - https://api.mocki.io/v2/549a5d8b/NASA-APOD-JamesWebbSpaceTelescope
 
-<h2>Galeria</h2>
+<h2>📷 Galeria</h2>
 
 
 
-<h2>Considerações</h2>
+<h2>📌 Considerações</h2>
 
 
 
-<h2>Material Complementar:</h2>
+<h2>📚 Material Complementar:</h2>
 
 - Artigo na Alura [“Como não aprender Java e Orientação a Objetos: herança”](https://www.alura.com.br/artigos/como-nao-aprender-orientacao-a-objetos-heranca).
 - Podcast Hipsters.tech sobre [Práticas de Orientação a Objetos](https://www.alura.com.br/podcast/praticas-de-orientacao-a-objetos-hipsters-129-a453).
